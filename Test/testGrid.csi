@@ -1,0 +1,4 @@
+[History]
+1=#P0#=mb	#P1#=Command11_Click	#P2#=testGrid/Form1/Command11_Click	#P3#=	#P4#=	#P5#=MembEventProcPrivate	#P6#=20200220005943	#P7#=0	#P8#=3	.
+2=#P0#=mb	#P1#=Command10_Click	#P2#=testGrid/Form1/Command10_Click	#P3#=	#P4#=	#P5#=MembEventProcPrivate	#P6#=20200220005634	#P7#=0	#P8#=6	.
+3=#P0#=mb	#P1#=AxBiGrid1_CellTextChange	#P2#=testGrid/Form1/AxBiGrid1_CellTextChange	#P3#=	#P4#=	#P5#=MembEventProcPrivate	#P6#=20200220005013	#P7#=0	#P8#=0	.
