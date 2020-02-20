@@ -918,6 +918,7 @@ Private Function AutoSizeC(myGrid As MSFlexGrid, _
 End Function
 
 Private Sub DisplayFormatedText(S As String, Row As Long, Col As Long)
+On Error Resume Next
     fg.TextMatrix(Row, Col) = Format(S, m_Cols(Col).ColDisplayFormat)
 End Sub
 

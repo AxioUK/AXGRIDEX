@@ -750,7 +750,7 @@ End If
 End Function
 
 Private Sub DisplayFormatedText(eG As eSideGrid, S As String, Row As Long, Col As Long)
-'On Error Resume Next
+On Error Resume Next
 If eG = eLeftGrid Then
     fg(1).TextMatrix(Row, Col) = Format(S, m_ColsL(Col).ColDisplayFormat)
 Else
