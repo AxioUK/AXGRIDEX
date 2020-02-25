@@ -13,7 +13,8 @@ Another FlexGrid with Extended Features (Based on MsFlexGrid)
 - Un Bi-Grid (doble grilla) para situaciones donde requieran mostrar diferentes datos para una misma consulta principal.
 
 ### Dependencies
-  [ENG] Requires the MsFlexGrid® control installed and registered (Included in VB6 + SP6) and ADO 2.8 or higher (MSDAC_TYP.EXE)
+  [ENG] Requires the MsFlexGrid® control installed and registered (Included in VB6 + SP6) and ADO 2.8 or higher (MSDAC_TYP.EXE).
+  
   [ESP] Requiere tener instalado y registrado el control MsFlexGrid® (Incluido en VB6+SP6) y ADO 2.8 o superior (MSDAC_TYP.EXE)
   
   
