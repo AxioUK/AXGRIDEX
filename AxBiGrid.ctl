@@ -176,6 +176,11 @@ Attribute VB_Exposed = True
 '|--------------------------------------------
 Option Explicit
 
+'''-----------------------------------------------------------
+Private Declare Function GetUserDefaultLCID Lib "kernel32" () As Long
+Private Declare Function GetLocaleInfo Lib "kernel32" Alias "GetLocaleInfoA" (ByVal Locale As Long, ByVal LCType As Long, ByVal lpLCData As String, ByVal cchData As Long) As Long
+'''-----------------------------------------------------------
+
 'Extra Events
 Public Event BeforeEdit(Cancel As Boolean)
 Public Event AfterEdit(ByVal Row As Long, ByVal Col As Long)
@@ -187,9 +192,9 @@ Public Event KeyPressEdit(xGrid As eSideGrid, ByVal Row As Long, ByVal Col As Lo
 Public Event KeyDownEdit(xGrid As eSideGrid, ByVal Row As Long, ByVal Col As Long, KeyCode As Integer, ByVal Shift As Integer)
 
 'Mapped Events
-Public Event Click(xGrid As eSideGrid)
+Public Event Click(xGrid As eSideGrid, Row As Long, Col As Long)
 Public Event Compare(ByVal Row1 As Long, ByVal Row2 As Long, Cmp As Integer)
-Public Event DblClick(xGrid As eSideGrid)
+Public Event DblClick(xGrid As eSideGrid, Row As Long, Col As Long)
 Public Event EnterCell()
 Public Event LeaveCell()
 Public Event RowColChange()
@@ -241,8 +246,8 @@ Dim m_Command             As String
 Dim ucSH                  As Long
 Dim ucSW                  As Long
 Dim tPart                 As Long
-Dim lRow                  As Integer
-Dim lCol                  As Integer
+Dim lRow                  As Long
+Dim lCol                  As Long
 Dim ObjGrd                As Long
 Dim OldRow(1 To 2)        As Integer
 Dim lngOldX               As Long
@@ -255,6 +260,10 @@ Dim g                     As Integer
 
 Private Const m_Def_BackColorAlt = &H8000000F
 
+Private sDecimal        As String
+Private sThousand       As String
+Private sDateDiv        As String
+Private sMoney          As String
 
 
 '************
@@ -404,7 +413,47 @@ End Select
 
 End Sub
 
-Public Sub ExtendLastColumn(Optional Col As Long)
+Public Function CleanValue(sValor As String) As Double
+
+If Left(sValor, 1) = sMoney Then
+   Dim sValue As Variant, i As Integer
+   For i = 1 To Len(sValor)
+      If Not Mid(sValor, i, 1) = sMoney And Not Mid(sValor, i, 1) = sThousand Then
+         sValue = sValue & Mid(sValor, i, 1)
+      End If
+   Next i
+Else
+  sValue = sValor
+End If
+CleanValue = Trim(sValue)
+Debug.Print sValue
+
+End Function
+
+Private Function fGetLocaleInfo(Valor As RegionalConstant) As String
+   Dim Simbolo As String
+   Dim r1 As Long
+   Dim r2 As Long
+   Dim p As Integer
+   Dim Locale As Long
+     
+   Locale = GetUserDefaultLCID()
+   r1 = GetLocaleInfo(Locale, Valor, vbNullString, 0)
+   'buffer
+   Simbolo = String$(r1, 0)
+   'En esta llamada devuelve el símbolo en el Buffer
+   r2 = GetLocaleInfo(Locale, Valor, Simbolo, r1)
+   'Localiza el espacio nulo de la cadena para eliminarla
+   p = InStr(Simbolo, Chr$(0))
+     
+   If p > 0 Then
+      'Elimina los nulos
+      fGetLocaleInfo = Left$(Simbolo, p - 1)
+   End If
+     
+End Function
+
+Public Sub ExtendLastColumn(eSide As eSideGrid, Optional Col As Long)
     Dim m_lScrollWidth As Long
     m_lScrollWidth = GetSystemMetrics(SM_CXVSCROLL) * Screen.TwipsPerPixelY
     
@@ -414,7 +463,7 @@ Public Sub ExtendLastColumn(Optional Col As Long)
     Dim nMargin As Long
     nMargin = 95
     
-    With fg(2)
+    With fg(eSide)
         ' is there a vertical scrollbar
         lScrollWidth = 0
         If .ScrollBars = flexScrollBarBoth Or .ScrollBars = flexScrollBarBoth Then
@@ -576,7 +625,7 @@ End Sub
 
 Public Function SaveAsExcel(sFilename As String)
     Dim myExcel As ExcelFileV2
-    Dim lRow As Integer, lCol As Integer, lCol2 As Integer
+    Dim lCol2 As Long
     Dim excelDouble As Double
     Dim rowOffset As Long
     Dim aTemp() As String
@@ -688,7 +737,7 @@ End Sub
 Private Function AutoSizeC(eSide As eSideGrid, Optional ByVal lfirstCol As Long = -1, _
                                 Optional ByVal lLastCol As Long = -1, Optional bCheckFont As Boolean = False)
   
-  Dim lCol As Long, lRow As Long, lCurCol As Long, lCurRow As Long
+  Dim lCurCol As Long, lCurRow As Long
   Dim lCellWidth As Long, lColWidth As Long
   Dim bFontBold As Boolean
   Dim dFontSize As Double
@@ -750,7 +799,7 @@ End If
 End Function
 
 Private Sub DisplayFormatedText(eG As eSideGrid, S As String, Row As Long, Col As Long)
-On Error Resume Next
+'On Error Resume Next
 If eG = eLeftGrid Then
     fg(1).TextMatrix(Row, Col) = Format(S, m_ColsL(Col).ColDisplayFormat)
 Else
@@ -1037,7 +1086,6 @@ ErrSub:
 End Sub
 
 Private Sub SetAlternateRowColors(eG As eSideGrid, lColor1 As Long, lColor2 As Long)
-    Dim lRow As Long, lCol As Long
     Dim lOrgRow As Long, lOrgCol As Long
     Dim lColor As Long, i As Integer
 
@@ -1166,7 +1214,7 @@ Private Sub StartKeyEdit(KeyAscii As Integer, Optional bShowOldText As Boolean)
            txtEdit.SelStart = 0
            txtEdit.SelLength = Len(txtEdit.Text)
         Else
-           txtEdit.Text = Chr(KeyAscii)
+           txtEdit.Text = Chr$(KeyAscii)
            txtEdit.SelStart = 1
         End If
         txtEdit.Tag = .Row & "|" & .Col
@@ -1229,6 +1277,8 @@ Private Sub Divisor_MouseDown(Button As Integer, Shift As Integer, x As Single, 
   Divisor.Height = UserControl.ScaleHeight
   Divisor.Top = 0 'UserControl.ScaleHeight * -1
   
+  fg(1).Redraw = False
+  fg(2).Redraw = False
   cBox.Visible = False
   TBox.Visible = False
   LBox.Visible = False
@@ -1258,6 +1308,9 @@ End Sub
 
 Private Sub Divisor_MouseUp(Button As Integer, Shift As Integer, x As Single, y As Single)
   IsMoving = False
+  fg(1).Redraw = True
+  fg(2).Redraw = True
+
   m_SplitterPos = Divisor.Left
   PropertyChanged "SplitterPos"
 End Sub
@@ -1308,7 +1361,7 @@ End Select
 
 With txtInfoBar
   Dim sRowText As String
-  .Text = "Left: " & lRow & "," & fg(1).Col & "| Right: " & lRow & "," & fg(2).Col & " / "
+  .Text = "Left: [" & lRow & ":" & fg(1).Col & "] Right: [" & lRow & ":" & fg(2).Col & "] "
   sRowText = ""
   
   Select Case m_SetInfoBar
@@ -1347,9 +1400,12 @@ With txtInfoBar
   End Select
 End With
 
-ErrSub0:
-RaiseEvent Click(CLng(Index))
 
+RaiseEvent Click(CLng(Index), lRow, lCol)
+Exit Sub
+ErrSub0:
+RaiseEvent Click(CLng(Index), lRow, lCol)
+MsgBox Err.Number & " " & Err.Description, vbOKOnly
 End Sub
 
 Private Sub fg_Compare(Index As Integer, ByVal Row1 As Long, ByVal Row2 As Long, Cmp As Integer)
@@ -1376,7 +1432,7 @@ With fg(Index)
     End If
 End With
 
-    RaiseEvent DblClick(CLng(Index))
+    RaiseEvent DblClick(CLng(Index), fg(Index).Row, fg(Index).Col)
 End Sub
 
 Private Sub fg_EnterCell(Index As Integer)
@@ -1782,6 +1838,12 @@ For i = 1 To 2
        Call SetAlternateRowColors(CLng(i), m_BackColorAlternate, m_BackColor)
     End If
 Next i
+
+    sDecimal = fGetLocaleInfo(LOCALE_SDECIMAL)
+    sThousand = fGetLocaleInfo(LOCALE_SMONTHOUSANDSEP)
+    sDateDiv = fGetLocaleInfo(LOCALE_SDATE)
+    sMoney = fGetLocaleInfo(LOCALE_SCURRENCY)
+
 End Sub
 
 Private Sub UserControl_Resize()
@@ -2128,20 +2190,20 @@ Public Property Get CalculateColumn(eSide As eSideGrid, Settings As eSubTotalSet
          For i = eRowInitial To eRowFinal
             Select Case Settings
                 Case Is = axSTSum
-                     nValue = nValue + Val(.TextMatrix(i, eColumn))
+                     nValue = nValue + CleanValue(.TextMatrix(i, eColumn))
                 Case Is = axSTMax
                      If bFirst Then
-                        nValue = Val(.TextMatrix(i, eColumn))
+                        nValue = CleanValue(.TextMatrix(i, eColumn))
                         bFirst = False
                      Else
-                        nValue = Max(nValue, Val(.TextMatrix(i, eColumn)))
+                        nValue = Max(nValue, CleanValue(.TextMatrix(i, eColumn)))
                      End If
                 Case Is = axSTMin
                      If bFirst Then
-                        nValue = Val(.TextMatrix(i, eColumn))
+                        nValue = CleanValue(.TextMatrix(i, eColumn))
                         bFirst = False
                      Else
-                        nValue = Min(nValue, Val(.TextMatrix(i, eColumn)))
+                        nValue = Min(nValue, CleanValue(.TextMatrix(i, eColumn)))
                      End If
                 Case Is = axSTCount
                         nValue = nValue + IIf(Len(.TextMatrix(i, eColumn)) > 0, 1, 0)
@@ -2149,7 +2211,7 @@ Public Property Get CalculateColumn(eSide As eSideGrid, Settings As eSubTotalSet
          Next i
          
          If Settings = axSTMultiply Then
-            nValue = Val(.TextMatrix(eRowInitial, eColumn)) * Val(.TextMatrix(eRowFinal, eColumn))
+            nValue = Val(.TextMatrix(eRowInitial, eColumn)) * CleanValue(.TextMatrix(eRowFinal, eColumn))
          End If
     End With
     
@@ -2180,20 +2242,20 @@ Public Property Get CalculateMatrix(eSide As eSideGrid, Settings As eSubTotalSet
              For j = eColumnInitial To eColumnFinal
                  Select Case Settings
                         Case Is = axSTSum
-                              nValue = nValue + Val(.TextMatrix(i, j))
+                              nValue = nValue + CleanValue(.TextMatrix(i, j))
                         Case Is = axSTMax
                              If bFirst Then
-                                nValue = Val(.TextMatrix(i, j))
+                                nValue = CleanValue(.TextMatrix(i, j))
                                 bFirst = False
                              Else
-                                nValue = Max(nValue, Val(.TextMatrix(i, j)))
+                                nValue = Max(nValue, CleanValue(.TextMatrix(i, j)))
                              End If
                         Case Is = axSTMin
                              If bFirst Then
-                                nValue = Val(.TextMatrix(i, j))
+                                nValue = CleanValue(.TextMatrix(i, j))
                                 bFirst = False
                              Else
-                                nValue = Min(nValue, Val(.TextMatrix(i, j)))
+                                nValue = Min(nValue, CleanValue(.TextMatrix(i, j)))
                              End If
                         Case Is = axSTCount
                              nValue = nValue + IIf(Len(.TextMatrix(i, j)) > 0, 1, 0)
@@ -2225,20 +2287,20 @@ Public Property Get CalculateRow(eSide As eSideGrid, Settings As eSubTotalSettin
          For i = eColInitial To eColFinal
             Select Case Settings
                 Case Is = axSTSum
-                     nValue = nValue + Val(.TextMatrix(eRow, i))
+                     nValue = nValue + CleanValue(.TextMatrix(eRow, i))
                 Case Is = axSTMax
                      If bFirst Then
-                        nValue = Val(.TextMatrix(eRow, i))
+                        nValue = CleanValue(.TextMatrix(eRow, i))
                         bFirst = False
                      Else
-                        nValue = Max(nValue, Val(.TextMatrix(eRow, i)))
+                        nValue = Max(nValue, CleanValue(.TextMatrix(eRow, i)))
                      End If
                 Case Is = axSTMin
                      If bFirst Then
-                        nValue = Val(.TextMatrix(eRow, i))
+                        nValue = CleanValue(.TextMatrix(eRow, i))
                         bFirst = False
                      Else
-                        nValue = Min(nValue, Val(.TextMatrix(eRow, i)))
+                        nValue = Min(nValue, CleanValue(.TextMatrix(eRow, i)))
                      End If
                 Case Is = axSTCount
                         nValue = nValue + IIf(Len(.TextMatrix(eRow, i)) > 0, 1, 0)
@@ -2246,7 +2308,7 @@ Public Property Get CalculateRow(eSide As eSideGrid, Settings As eSubTotalSettin
          Next i
          
          If Settings = axSTMultiply Then
-            nValue = Val(.TextMatrix(eRow, eColInitial)) * Val(.TextMatrix(eRow, eColFinal))
+            nValue = Val(.TextMatrix(eRow, eColInitial)) * CleanValue(.TextMatrix(eRow, eColFinal))
          End If
     End With
     
@@ -3372,8 +3434,8 @@ Public Property Get Value(eG As eSideGrid) As Variant
      Value = Val(fg(eG).Text)
 End Property
 
-Public Property Get ValueMatrix(eG As eSideGrid, ByVal Row As Long, ByVal Col As Long) As Variant
-     ValueMatrix = Val(fg(eG).TextMatrix(Row, Col))
+Public Property Get ValueMatrix(eG As eSideGrid, ByVal Row As Long, ByVal Col As Long) As Double
+     ValueMatrix = CleanValue(fg(eG).TextMatrix(Row, Col))
 End Property
 
 'WARNING! DO NOT REMOVE OR MODIFY THE FOLLOWING COMMENTED LINES!
