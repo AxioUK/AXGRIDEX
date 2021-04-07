@@ -1,0 +1,29 @@
+Línea 23: la clase AxioGrid.AxGrid del control AxGrid1 no era una clase de control cargada.
+Línea 367: la clase AxioGrid.AxBiGrid del control AxBiGrid1 no era una clase de control cargada.
+Línea 29: el nombre de la propiedad _ExtentX de AxGrid1 no es válido.
+Línea 30: el nombre de la propiedad _ExtentY de AxGrid1 no es válido.
+Línea 31: el nombre de la propiedad EnterKeyBehaviour de AxGrid1 no es válido.
+Línea 32: el nombre de la propiedad BackColorAlternate de AxGrid1 no es válido.
+Línea 33: el nombre de la propiedad GridLinesFixed de AxGrid1 no es válido.
+Línea 35: el nombre de la propiedad BackColorFixed de AxGrid1 no es válido.
+Línea 36: el nombre de la propiedad Cols de AxGrid1 no es válido.
+Línea 46: el nombre de la propiedad GridColorFixed de AxGrid1 no es válido.
+Línea 48: el nombre de la propiedad Rows de AxGrid1 no es válido.
+Línea 49: el nombre de la propiedad ScrollTrack de AxGrid1 no es válido.
+Línea 23: no se pudo establecer la propiedad MouseIcon de AxGrid1.
+Línea 373: el nombre de la propiedad _ExtentX de AxBiGrid1 no es válido.
+Línea 374: el nombre de la propiedad _ExtentY de AxBiGrid1 no es válido.
+Línea 375: el nombre de la propiedad SplitterPos de AxBiGrid1 no es válido.
+Línea 376: el nombre de la propiedad EnterKeyBehaviour de AxBiGrid1 no es válido.
+Línea 377: el nombre de la propiedad ShowInfoBar de AxBiGrid1 no es válido.
+Línea 378: el nombre de la propiedad GridLinesFixed de AxBiGrid1 no es válido.
+Línea 380: el nombre de la propiedad FixedCols de AxBiGrid1 no es válido.
+Línea 391: el nombre de la propiedad RowHeightMin de AxBiGrid1 no es válido.
+Línea 392: el nombre de la propiedad Rows de AxBiGrid1 no es válido.
+Línea 393: el nombre de la propiedad ScrollTrack de AxBiGrid1 no es válido.
+Línea 394: el nombre de la propiedad GridLinesFixed de AxBiGrid1 no es válido.
+Línea 396: el nombre de la propiedad FixedCols de AxBiGrid1 no es válido.
+Línea 407: el nombre de la propiedad RowHeightMin de AxBiGrid1 no es válido.
+Línea 408: el nombre de la propiedad Rows de AxBiGrid1 no es válido.
+Línea 409: el nombre de la propiedad ScrollTrack de AxBiGrid1 no es válido.
+Línea 367: no se pudo establecer la propiedad MouseIcon de AxBiGrid1.

@@ -1,0 +1,11 @@
+Línea 77: la clase Grid.KlexGrid del control KlexGrid1 no era una clase de control cargada.
+Línea 83: el nombre de la propiedad _ExtentX de KlexGrid1 no es válido.
+Línea 84: el nombre de la propiedad _ExtentY de KlexGrid1 no es válido.
+Línea 85: el nombre de la propiedad EnterKeyBehaviour de KlexGrid1 no es válido.
+Línea 86: el nombre de la propiedad BackColorAlternate de KlexGrid1 no es válido.
+Línea 87: el nombre de la propiedad GridLinesFixed de KlexGrid1 no es válido.
+Línea 88: el nombre de la propiedad BackColorFixed de KlexGrid1 no es válido.
+Línea 89: el nombre de la propiedad Cols de KlexGrid1 no es válido.
+Línea 99: el nombre de la propiedad GridColorFixed de KlexGrid1 no es válido.
+Línea 101: el nombre de la propiedad Rows de KlexGrid1 no es válido.
+Línea 77: no se pudo establecer la propiedad MouseIcon de KlexGrid1.

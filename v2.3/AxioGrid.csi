@@ -1,0 +1,101 @@
+[History]
+1=#P0#=mb	#P1#=CalculateRow	#P2#=AxioGrid/AxBiGrid/CalculateRow [Get]	#P3#=	#P4#=	#P5#=MembProperty	#P6#=20210406231610	#P7#=0	#P8#=1	.
+2=#P0#=mb	#P1#=CalculateMatrix	#P2#=AxioGrid/AxBiGrid/CalculateMatrix [Get]	#P3#=	#P4#=	#P5#=MembProperty	#P6#=20210406231635	#P7#=0	#P8#=4	.
+3=#P0#=mb	#P1#=CalculateColumn	#P2#=AxioGrid/AxBiGrid/CalculateColumn [Get]	#P3#=	#P4#=	#P5#=MembProperty	#P6#=20210406231530	#P7#=0	#P8#=41	.
+4=#P0#=mb	#P1#=ValueMatrix	#P2#=AxioGrid/AxBiGrid/ValueMatrix [Get]	#P3#=	#P4#=	#P5#=MembProperty	#P6#=20210406231456	#P7#=0	#P8#=1	.
+5=#P0#=mb	#P1#=CleanValue	#P2#=AxioGrid/AxBiGrid/CleanValue	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20210406231032	#P7#=0	#P8#=13	.
+6=#P0#=mb	#P1#=ExtendLastColumn	#P2#=AxioGrid/AxBiGrid/ExtendLastColumn	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20210406231229	#P7#=0	#P8#=9	.
+7=#P0#=mb	#P1#=CalculateRow	#P2#=AxioGrid/AxGrid/CalculateRow [Get]	#P3#=	#P4#=	#P5#=MembProperty	#P6#=20210406181515	#P7#=0	#P8#=35	.
+8=#P0#=mb	#P1#=CalculateMatrix	#P2#=AxioGrid/AxGrid/CalculateMatrix [Get]	#P3#=	#P4#=	#P5#=MembProperty	#P6#=20210406181123	#P7#=0	#P8#=32	.
+9=#P0#=mb	#P1#=CalculateColumn	#P2#=AxioGrid/AxGrid/CalculateColumn [Get]	#P3#=	#P4#=	#P5#=MembProperty	#P6#=20210406180833	#P7#=0	#P8#=25	.
+10=#P0#=mb	#P1#=fg_Click	#P2#=AxioGrid/AxGrid/fg_Click	#P3#=	#P4#=	#P5#=MembEventProcPrivate	#P6#=20210406180344	#P7#=0	#P8#=42	.
+11=#P0#=mb	#P1#=ValueMatrix	#P2#=AxioGrid/AxGrid/ValueMatrix [Get]	#P3#=	#P4#=	#P5#=MembProperty	#P6#=20210406175210	#P7#=0	#P8#=1	.
+12=#P0#=mb	#P1#=CleanValue	#P2#=AxioGrid/AxGrid/CleanValue	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20210406175109	#P7#=0	#P8#=0	.
+13=#P0#=mb	#P1#=fGetLocaleInfo	#P2#=AxioGrid/AxGrid/fGetLocaleInfo	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20210406231100	#P7#=0	#P8#=0	.
+14=#P0#=mb	#P1#=ExtendLastColumn	#P2#=AxioGrid/AxGrid/ExtendLastColumn	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20210406231143	#P7#=0	#P8#=1	.
+15=#P0#=mb	#P1#=AboutBox	#P2#=AxioGrid/AxGrid/AboutBox	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20210406171923	#P7#=0	#P8#=5	.
+16=#P0#=mb	#P1#=UserControl_ReadProperties	#P2#=AxioGrid/AxGrid/UserControl_ReadProperties	#P3#=	#P4#=	#P5#=MembEventProcPrivate	#P6#=20210406171743	#P7#=0	#P8#=64	.
+17=#P0#=mb	#P1#=ClearGrid	#P2#=AxioGrid/AxGrid/ClearGrid	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20210406170326	#P7#=0	#P8#=4	.
+18=#P0#=mb	#P1#=WordWrap	#P2#=AxioGrid/AxGrid/WordWrap [Let]	#P3#=	#P4#=	#P5#=MembProperty	#P6#=20210406164407	#P7#=0	#P8#=4	.
+19=#P0#=mb	#P1#=TopRow	#P2#=AxioGrid/AxGrid/TopRow [Get]	#P3#=	#P4#=	#P5#=MembProperty	#P6#=20210406164337	#P7#=0	#P8#=2	.
+20=#P0#=mb	#P1#=WordWrap	#P2#=AxioGrid/AxGrid/WordWrap [Get]	#P3#=	#P4#=	#P5#=MembProperty	#P6#=20210406164255	#P7#=0	#P8#=0	.
+21=#P0#=mb	#P1#=LoadChkInCol	#P2#=AxioGrid/AxGrid/LoadChkInCol	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20200303225508	#P7#=0	#P8#=14	.
+22=#P0#=mb	#P1#=SetColumnObject	#P2#=AxioGrid/AxGrid/SetColumnObject	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20200303225343	#P7#=0	#P8#=50	.
+23=#P0#=mb	#P1#=SetAlternateRowColors	#P2#=AxioGrid/AxGrid/SetAlternateRowColors	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20200303225254	#P7#=0	#P8#=1	.
+24=#P0#=mb	#P1#=AutoSizeC	#P2#=AxioGrid/AxGrid/AutoSizeC	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20200303225058	#P7#=0	#P8#=22	.
+25=#P0#=mb	#P1#=SaveAsOldXLS	#P2#=AxioGrid/AxGrid/SaveAsOldXLS	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20200303225026	#P7#=0	#P8#=11	.
+26=#P0#=mb	#P1#=fg_Click	#P2#=AxioGrid/AxBiGrid/fg_Click	#P3#=	#P4#=	#P5#=MembEventProcPrivate	#P6#=20200303224915	#P7#=0	#P8#=5	.
+27=#P0#=mb	#P1#=AddItem	#P2#=AxioGrid/AxBiGrid/AddItem	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20200301232434	#P7#=0	#P8#=15	.
+28=#P0#=mb	#P1#=Divisor_MouseDown	#P2#=AxioGrid/AxBiGrid/Divisor_MouseDown	#P3#=	#P4#=	#P5#=MembEventProcPrivate	#P6#=20200301181012	#P7#=0	#P8#=0	.
+29=#P0#=mb	#P1#=SplitterFixed	#P2#=AxioGrid/AxBiGrid/SplitterFixed [Get]	#P3#=	#P4#=	#P5#=MembProperty	#P6#=20200301180024	#P7#=0	#P8#=0	.
+30=#P0#=mb	#P1#=UserControl_WriteProperties	#P2#=AxioGrid/AxBiGrid/UserControl_WriteProperties	#P3#=	#P4#=	#P5#=MembEventProcPrivate	#P6#=20200301175928	#P7#=0	#P8#=5	.
+31=#P0#=mb	#P1#=UserControl_Show	#P2#=AxioGrid/AxBiGrid/UserControl_Show	#P3#=	#P4#=	#P5#=MembEventProcPrivate	#P6#=20200301175817	#P7#=0	#P8#=0	.
+32=#P0#=mb	#P1#=UserControl_Resize	#P2#=AxioGrid/AxBiGrid/UserControl_Resize	#P3#=	#P4#=	#P5#=MembEventProcPrivate	#P6#=20200301175616	#P7#=0	#P8#=1	.
+33=#P0#=mb	#P1#=UserControl_InitProperties	#P2#=AxioGrid/AxBiGrid/UserControl_InitProperties	#P3#=	#P4#=	#P5#=MembEventProcPrivate	#P6#=20200301175536	#P7#=0	#P8#=2	.
+34=#P0#=mb	#P1#=UserControl_Initialize	#P2#=AxioGrid/AxBiGrid/UserControl_Initialize	#P3#=	#P4#=	#P5#=MembEventProcPrivate	#P6#=20200301175508	#P7#=0	#P8#=1	.
+35=#P0#=mb	#P1#=SaveAsExcel	#P2#=AxioGrid/AxBiGrid/SaveAsExcel	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20200301142225	#P7#=0	#P8#=18	.
+36=#P0#=mb	#P1#=EWriteDouble	#P2#=AxioGrid/ExcelFileV2/EWriteDouble	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20200301142000	#P7#=0	#P8#=4	.
+37=#P0#=mb	#P1#=EWriteString	#P2#=AxioGrid/ExcelFileV2/EWriteString	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20200301141948	#P7#=0	#P8#=2	.
+38=#P0#=mb	#P1#=EWriteInteger	#P2#=AxioGrid/ExcelFileV2/EWriteInteger	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20200301141947	#P7#=0	#P8#=1	.
+39=#P0#=mb	#P1#=SetAlternateRowColors	#P2#=AxioGrid/AxBiGrid/SetAlternateRowColors	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20200301141703	#P7#=0	#P8#=29	.
+40=#P0#=mb	#P1#=AutoSizeC	#P2#=AxioGrid/AxBiGrid/AutoSizeC	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20200301141656	#P7#=0	#P8#=10	.
+41=#P0#=mb	#P1#=fg_DblClick	#P2#=AxioGrid/AxBiGrid/fg_DblClick	#P3#=	#P4#=	#P5#=MembEventProcPrivate	#P6#=20200301013321	#P7#=0	#P8#=16	.
+42=#P0#=mb	#P1#=fg_DblClick	#P2#=AxioGrid/AxGrid/fg_DblClick	#P3#=	#P4#=	#P5#=MembEventProcPrivate	#P6#=20200301013045	#P7#=0	#P8#=17	.
+43=#P0#=mb	#P1#=AboutBox	#P2#=AxioGrid/AxBiGrid/AboutBox	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20210406231357	#P7#=0	#P8#=-4	.
+44=#P0#=mb	#P1#=AutoSizeCols	#P2#=AxioGrid/AxGrid/AutoSizeCols	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20200229233043	#P7#=0	#P8#=3	.
+45=#P0#=mb	#P1#=AddItem	#P2#=AxioGrid/AxGrid/AddItem	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20200229232924	#P7#=0	#P8#=5	.
+46=#P0#=mb	#P1#=UserControl_WriteProperties	#P2#=AxioGrid/AxGrid/UserControl_WriteProperties	#P3#=	#P4#=	#P5#=MembEventProcPrivate	#P6#=20190407155153	#P7#=0	#P8#=12	.
+47=#P0#=mb	#P1#=AddItemObject	#P2#=AxioGrid/AxGrid/AddItemObject	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20190406130846	#P7#=0	#P8#=8	.
+48=#P0#=mb	#P1#=MergeCells	#P2#=AxioGrid/AxGrid/MergeCells [Get]	#P3#=	#P4#=	#P5#=MembProperty	#P6#=20181028231258	#P7#=0	#P8#=-2	.
+49=#P0#=mb	#P1#=ColAlignment	#P2#=AxioGrid/AxGrid/ColAlignment [Get]	#P3#=	#P4#=	#P5#=MembProperty	#P6#=20181028231204	#P7#=0	#P8#=1	.
+50=#P0#=mb	#P1#=TextMatrix	#P2#=AxioGrid/AxGrid/TextMatrix [Get]	#P3#=	#P4#=	#P5#=MembProperty	#P6#=20181028202626	#P7#=0	#P8#=1	.
+51=#P0#=mb	#P1#=CellCheckValue	#P2#=AxioGrid/AxGrid/CellCheckValue [Get]	#P3#=	#P4#=	#P5#=MembProperty	#P6#=20181028202540	#P7#=0	#P8#=0	.
+52=#P0#=mb	#P1#=LeftCol	#P2#=AxioGrid/AxGrid/LeftCol [Let]	#P3#=	#P4#=	#P5#=MembProperty	#P6#=20181028202217	#P7#=0	#P8#=2	.
+53=#P0#=mb	#P1#=LeftCol	#P2#=AxioGrid/AxGrid/LeftCol [Get]	#P3#=	#P4#=	#P5#=MembProperty	#P6#=20181028202201	#P7#=0	#P8#=8	.
+54=#P0#=mb	#P1#=RemoveItem	#P2#=AxioGrid/AxGrid/RemoveItem	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20181028202122	#P7#=0	#P8#=-1	.
+55=#P0#=mb	#P1#=StartKeyEdit	#P2#=AxioGrid/AxGrid/StartKeyEdit	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20181028202019	#P7#=0	#P8#=1	.
+56=#P0#=mb	#P1#=Editable	#P2#=AxioGrid/AxGrid/Editable [Let]	#P3#=	#P4#=	#P5#=MembProperty	#P6#=20181028201908	#P7#=0	#P8#=1	.
+57=#P0#=mb	#P1#=SetColumnObject	#P2#=AxioGrid/AxBiGrid/SetColumnObject	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20181028175501	#P7#=0	#P8#=1	.
+58=#P0#=mb	#P1#=CellCheckValue	#P2#=AxioGrid/AxGrid/CellCheckValue [Let]	#P3#=	#P4#=	#P5#=MembProperty	#P6#=20181028175043	#P7#=0	#P8#=7	.
+59=#P0#=mb	#P1#=cell	#P2#=AxioGrid/AxGrid/cell [Get]	#P3#=	#P4#=	#P5#=MembProperty	#P6#=20181028174642	#P7#=0	#P8#=3	.
+60=#P0#=mb	#P1#=CellFontBold	#P2#=AxioGrid/AxGrid/CellFontBold [Get]	#P3#=	#P4#=	#P5#=MembProperty	#P6#=20181028173609	#P7#=0	#P8#=-2	.
+61=#P0#=mb	#P1#=CellBackColor	#P2#=AxioGrid/AxGrid/CellBackColor [Let]	#P3#=	#P4#=	#P5#=MembProperty	#P6#=20181028172955	#P7#=0	#P8#=1	.
+62=#P0#=mb	#P1#=SetColObject	#P2#=AxioGrid/AxGrid/SetColObject [Let]	#P3#=	#P4#=	#P5#=MembProperty	#P6#=20181028172722	#P7#=0	#P8#=2	.
+63=#P0#=mb	#P1#=SelectionMode	#P2#=AxioGrid/AxGrid/SelectionMode [Get]	#P3#=	#P4#=	#P5#=MembProperty	#P6#=20181028171536	#P7#=0	#P8#=1	.
+64=#P0#=mb	#P1#=Class_Terminate	#P2#=AxioGrid/cSubclassingThunk/Class_Terminate	#P3#=	#P4#=	#P5#=MembEventProcPrivate	#P6#=20181028171249	#P7#=0	#P8#=6	.
+65=#P0#=mb	#P1#=Class_Initialize	#P2#=AxioGrid/cSubclassingThunk/Class_Initialize	#P3#=	#P4#=	#P5#=MembEventProcPrivate	#P6#=20181028171238	#P7#=0	#P8#=6	.
+66=#P0#=mb	#P1#=SelectionMode	#P2#=AxioGrid/AxBiGrid/SelectionMode [Let]	#P3#=	#P4#=	#P5#=MembProperty	#P6#=20181028171052	#P7#=0	#P8#=1	.
+67=#P0#=mb	#P1#=cBox_KeyUp	#P2#=AxioGrid/AxBiGrid/cBox_KeyUp	#P3#=	#P4#=	#P5#=MembEventProcPrivate	#P6#=20181028170644	#P7#=0	#P8#=6	.
+68=#P0#=mb	#P1#=cBox_KeyPress	#P2#=AxioGrid/AxBiGrid/cBox_KeyPress	#P3#=	#P4#=	#P5#=MembEventProcPrivate	#P6#=20181028170432	#P7#=0	#P8#=13	.
+69=#P0#=mb	#P1#=cBox_KeyUp	#P2#=AxioGrid/AxGrid/cBox_KeyUp	#P3#=	#P4#=	#P5#=MembEventProcPrivate	#P6#=20181028170010	#P7#=0	#P8#=1	.
+70=#P0#=mb	#P1#=LBox_KeyPress	#P2#=AxioGrid/AxGrid/LBox_KeyPress	#P3#=	#P4#=	#P5#=MembEventProcPrivate	#P6#=20181028151943	#P7#=0	#P8#=3	.
+71=#P0#=mb	#P1#=SetColObject	#P2#=AxioGrid/AxBiGrid/SetColObject [Let]	#P3#=	#P4#=	#P5#=MembProperty	#P6#=20181028135109	#P7#=0	#P8#=1	.
+72=#P0#=mb	#P1#=cBox_Click	#P2#=AxioGrid/AxGrid/cBox_Click	#P3#=	#P4#=	#P5#=MembEventProcPrivate	#P6#=20181028133022	#P7#=0	#P8#=1	.
+73=#P0#=mb	#P1#=DisplayFormatedText	#P2#=AxioGrid/AxGrid/DisplayFormatedText	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20181028132840	#P7#=0	#P8#=1	.
+74=#P0#=mb	#P1#=EndEdit	#P2#=AxioGrid/AxGrid/EndEdit	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20181028132823	#P7#=0	#P8#=0	.
+75=#P0#=mb	#P1#=cBox_DblClick	#P2#=AxioGrid/AxGrid/cBox_DblClick	#P3#=	#P4#=	#P5#=MembEventProcPrivate	#P6#=20181028131701	#P7#=0	#P8#=4	.
+76=#P0#=mb	#P1#=fg_EnterCell	#P2#=AxioGrid/AxGrid/fg_EnterCell	#P3#=	#P4#=	#P5#=MembEventProcPrivate	#P6#=20181028131558	#P7#=0	#P8#=1	.
+77=#P0#=mb	#P1#=OKButton_Click	#P2#=AxioGrid/AxGridAbout/OKButton_Click	#P3#=	#P4#=	#P5#=MembEventProcPrivate	#P6#=20181026142144	#P7#=0	#P8#=1	.
+78=#P0#=mb	#P1#=ScrollBars	#P2#=AxioGrid/AxBiGrid/ScrollBars [Get]	#P3#=	#P4#=	#P5#=MembProperty	#P6#=20170614175228	#P7#=0	#P8#=1	.
+79=#P0#=mb	#P1#=UserControl_ReadProperties	#P2#=AxioGrid/AxBiGrid/UserControl_ReadProperties	#P3#=	#P4#=	#P5#=MembEventProcPrivate	#P6#=20210406231335	#P7#=0	#P8#=76	.
+80=#P0#=mb	#P1#=fg_KeyDown	#P2#=AxioGrid/AxGrid/fg_KeyDown	#P3#=	#P4#=	#P5#=MembEventProcPrivate	#P6#=20170614173706	#P7#=0	#P8#=22	.
+81=#P0#=mb	#P1#=TBox_KeyPress	#P2#=AxioGrid/AxGrid/TBox_KeyPress	#P3#=	#P4#=	#P5#=MembEventProcPrivate	#P6#=20170609162128	#P7#=0	#P8#=0	.
+82=#P0#=mb	#P1#=LBox_Click	#P2#=AxioGrid/AxGrid/LBox_Click	#P3#=	#P4#=	#P5#=MembEventProcPrivate	#P6#=20170609160041	#P7#=0	#P8#=1	.
+83=#P0#=mb	#P1#=Boton_Click	#P2#=AxioGrid/AxGrid/Boton_Click	#P3#=	#P4#=	#P5#=MembEventProcPrivate	#P6#=20170608224252	#P7#=0	#P8#=1	.
+84=#P0#=mb	#P1#=IsCellVisible	#P2#=AxioGrid/AxGrid/IsCellVisible	#P3#=	#P4#=	#P5#=MembMethodPublic	#P6#=20170608222711	#P7#=0	#P8#=-1	.
+85=#P0#=mb	#P1#=CellPicture	#P2#=AxioGrid/AxGrid/CellPicture [Get]	#P3#=	#P4#=	#P5#=MembProperty	#P6#=20151108231149	#P7#=0	#P8#=1	.
+86=#P0#=mb	#P1#=UserControl_Initialize	#P2#=AxioGrid/AxGrid/UserControl_Initialize	#P3#=	#P4#=	#P5#=MembEventProcPrivate	#P6#=20151108230207	#P7#=0	#P8#=1	.
+87=#P0#=mb	#P1#=Rows	#P2#=AxioGrid/AxGrid/Rows [Let]	#P3#=	#P4#=	#P5#=MembProperty	#P6#=20151108230128	#P7#=0	#P8#=4	.
+88=#P0#=mb	#P1#=Cols	#P2#=AxioGrid/AxGrid/Cols [Let]	#P3#=	#P4#=	#P5#=MembProperty	#P6#=20151108225850	#P7#=0	#P8#=7	.
+89=#P0#=mb	#P1#=MnuFGridAddRow_Click	#P2#=AxioGrid/AxGrid/MnuFGridAddRow_Click	#P3#=	#P4#=	#P5#=MembEventProcPrivate	#P6#=20151108225601	#P7#=0	#P8#=24	.
+90=#P0#=mb	#P1#=MnuFGridAddCol_Click	#P2#=AxioGrid/AxGrid/MnuFGridAddCol_Click	#P3#=	#P4#=	#P5#=MembEventProcPrivate	#P6#=20151108225541	#P7#=0	#P8#=1	.
+91=#P0#=mb	#P1#=Sort	#P2#=AxioGrid/AxGrid/Sort [Let]	#P3#=	#P4#=	#P5#=MembProperty	#P6#=20151106234331	#P7#=0	#P8#=1	.
+92=#P0#=mb	#P1#=RowPosition	#P2#=AxioGrid/AxGrid/RowPosition [Let]	#P3#=	#P4#=	#P5#=MembProperty	#P6#=20151106234318	#P7#=0	#P8#=0	.
+93=#P0#=mb	#P1#=ColPosition	#P2#=AxioGrid/AxGrid/ColPosition [Let]	#P3#=	#P4#=	#P5#=MembProperty	#P6#=20151106234315	#P7#=0	#P8#=1	.
+94=#P0#=mb	#P1#=ColWidth	#P2#=AxioGrid/AxGrid/ColWidth [Get]	#P3#=	#P4#=	#P5#=MembProperty	#P6#=20151106231949	#P7#=0	#P8#=-3	.
+95=#P0#=mb	#P1#=Row	#P2#=AxioGrid/AxGrid/Row [Get]	#P3#=	#P4#=	#P5#=MembProperty	#P6#=20151106231545	#P7#=0	#P8#=1	.
+96=#P0#=mb	#P1#=Rows	#P2#=AxioGrid/AxGrid/Rows [Get]	#P3#=	#P4#=	#P5#=MembProperty	#P6#=20151106231009	#P7#=0	#P8#=1	.
+97=#P0#=mb	#P1#=Value	#P2#=AxioGrid/AxGrid/Value [Get]	#P3#=	#P4#=	#P5#=MembProperty	#P6#=20151106230211	#P7#=0	#P8#=1	.
+98=#P0#=mb	#P1#=CellTop	#P2#=AxioGrid/AxGrid/CellTop [Get]	#P3#=	#P4#=	#P5#=MembProperty	#P6#=20151106225617	#P7#=0	#P8#=10	.
+99=#P0#=mb	#P1#=CellWidth	#P2#=AxioGrid/AxGrid/CellWidth [Get]	#P3#=	#P4#=	#P5#=MembProperty	#P6#=20151106225606	#P7#=0	#P8#=8	.
+100=#P0#=mb	#P1#=Clip	#P2#=AxioGrid/AxGrid/Clip [Get]	#P3#=	#P4#=	#P5#=MembProperty	#P6#=20151106225530	#P7#=0	#P8#=-3	.

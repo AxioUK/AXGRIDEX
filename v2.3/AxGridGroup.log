@@ -1,0 +1,11 @@
+Línea 53: la clase AxioGrid.AxGrid del control fG no era una clase de control cargada.
+Línea 59: el nombre de la propiedad _ExtentX de fG no es válido.
+Línea 60: el nombre de la propiedad _ExtentY de fG no es válido.
+Línea 61: el nombre de la propiedad EnterKeyBehaviour de fG no es válido.
+Línea 62: el nombre de la propiedad BackColorAlternate de fG no es válido.
+Línea 63: el nombre de la propiedad GridLinesFixed de fG no es válido.
+Línea 64: el nombre de la propiedad BackColorFixed de fG no es válido.
+Línea 65: el nombre de la propiedad Cols de fG no es válido.
+Línea 75: el nombre de la propiedad GridColorFixed de fG no es válido.
+Línea 77: el nombre de la propiedad Rows de fG no es válido.
+Línea 53: no se pudo establecer la propiedad MouseIcon de fG.

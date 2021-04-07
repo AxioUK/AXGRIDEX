@@ -1,0 +1,48 @@
+Línea 71: la clase ucAxSuite2014.jcbutton del control cmdInformes no era una clase de control cargada.
+Línea 119: la clase ucAxSuite2014.jcbutton del control cmdGrabar no era una clase de control cargada.
+Línea 257: la clase ucAxSuite2014.jcbutton del control cmdGrabarIn no era una clase de control cargada.
+Línea 280: la clase ucAxSuite2014.jcbutton del control cmdAbrir no era una clase de control cargada.
+Línea 303: la clase ucAxSuite2014.jcbutton del control cmdCerrar no era una clase de control cargada.
+Línea 326: la clase ucAxSuite2014.jcbutton del control cmdNuevo no era una clase de control cargada.
+Línea 77: el nombre de la propiedad _ExtentX de cmdInformes no es válido.
+Línea 78: el nombre de la propiedad _ExtentY de cmdInformes no es válido.
+Línea 79: el nombre de la propiedad ShowFocusRect de cmdInformes no es válido.
+Línea 89: el nombre de la propiedad Caption de cmdInformes no es válido.
+Línea 91: el nombre de la propiedad PictureAlign de cmdInformes no es válido.
+Línea 92: el nombre de la propiedad UseMaskCOlor de cmdInformes no es válido.
+Línea 71: no se pudo establecer la propiedad Picture de cmdInformes.
+Línea 125: el nombre de la propiedad _ExtentX de cmdGrabar no es válido.
+Línea 126: el nombre de la propiedad _ExtentY de cmdGrabar no es válido.
+Línea 127: el nombre de la propiedad ShowFocusRect de cmdGrabar no es válido.
+Línea 137: el nombre de la propiedad Caption de cmdGrabar no es válido.
+Línea 139: el nombre de la propiedad PictureAlign de cmdGrabar no es válido.
+Línea 140: el nombre de la propiedad UseMaskCOlor de cmdGrabar no es válido.
+Línea 119: no se pudo establecer la propiedad Picture de cmdGrabar.
+Línea 263: el nombre de la propiedad _ExtentX de cmdGrabarIn no es válido.
+Línea 264: el nombre de la propiedad _ExtentY de cmdGrabarIn no es válido.
+Línea 265: el nombre de la propiedad ShowFocusRect de cmdGrabarIn no es válido.
+Línea 275: el nombre de la propiedad Caption de cmdGrabarIn no es válido.
+Línea 277: el nombre de la propiedad PictureAlign de cmdGrabarIn no es válido.
+Línea 278: el nombre de la propiedad UseMaskCOlor de cmdGrabarIn no es válido.
+Línea 257: no se pudo establecer la propiedad Picture de cmdGrabarIn.
+Línea 286: el nombre de la propiedad _ExtentX de cmdAbrir no es válido.
+Línea 287: el nombre de la propiedad _ExtentY de cmdAbrir no es válido.
+Línea 288: el nombre de la propiedad ShowFocusRect de cmdAbrir no es válido.
+Línea 298: el nombre de la propiedad Caption de cmdAbrir no es válido.
+Línea 300: el nombre de la propiedad PictureAlign de cmdAbrir no es válido.
+Línea 301: el nombre de la propiedad UseMaskCOlor de cmdAbrir no es válido.
+Línea 280: no se pudo establecer la propiedad Picture de cmdAbrir.
+Línea 309: el nombre de la propiedad _ExtentX de cmdCerrar no es válido.
+Línea 310: el nombre de la propiedad _ExtentY de cmdCerrar no es válido.
+Línea 311: el nombre de la propiedad ShowFocusRect de cmdCerrar no es válido.
+Línea 321: el nombre de la propiedad Caption de cmdCerrar no es válido.
+Línea 323: el nombre de la propiedad PictureAlign de cmdCerrar no es válido.
+Línea 324: el nombre de la propiedad UseMaskCOlor de cmdCerrar no es válido.
+Línea 303: no se pudo establecer la propiedad Picture de cmdCerrar.
+Línea 332: el nombre de la propiedad _ExtentX de cmdNuevo no es válido.
+Línea 333: el nombre de la propiedad _ExtentY de cmdNuevo no es válido.
+Línea 334: el nombre de la propiedad ShowFocusRect de cmdNuevo no es válido.
+Línea 344: el nombre de la propiedad Caption de cmdNuevo no es válido.
+Línea 346: el nombre de la propiedad PictureAlign de cmdNuevo no es válido.
+Línea 347: el nombre de la propiedad UseMaskCOlor de cmdNuevo no es válido.
+Línea 326: no se pudo establecer la propiedad Picture de cmdNuevo.
